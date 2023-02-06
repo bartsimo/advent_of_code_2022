@@ -30,7 +30,7 @@ def find_top_three_calories(ls: list) -> int:
     # largest values are at the end of the sorted list, return sum of sliced list
     return sum(calories_per_elf[-3:])
 
-
+# run core logic from one main function
 def main():
     calories = get_input("input1")
     print(find_top_three_calories(calories))

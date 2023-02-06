@@ -26,7 +26,7 @@ def find_max_calories(ls: list) -> int:
 
     return max(calories_per_elf)
 
-
+# run core logic from one main function
 def main():
     calories = get_input("input1")
     print(find_max_calories(calories))

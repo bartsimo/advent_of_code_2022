@@ -19,9 +19,14 @@
 
 
 def calculate_score(opponent, me):
+    # initialize score for one round
     score = 0
+    # if I have rock, add 1
     if me == "X":
         score += 1
+        # further game payoff depending on play of opponent
+        # return as fast as possible
+        # other conditional cases similar to this one, comments there ommitted for this reason
         if opponent == "A":
             return score + 3
         elif opponent == "B":
@@ -48,20 +53,22 @@ def calculate_score(opponent, me):
 def get_rounds_inputs(round):
     opponent = round[0]
     me = round[-1]
-
+    # return tuple of str
     return opponent, me
 
 
 
-
+# run core logic from one main function
 def main():
     total_score = 0
 
     with open("input2") as f:
+        # first, read() gives a string that is split into a list at line breaks by splitlines.
         mylist = f.read().splitlines() 
-
+    #last element empty
     mylist.pop(-1)
 
+    # for every play
     for i in mylist:
         opponent, me = get_rounds_inputs(i)
         score_of_round = calculate_score(opponent, me)

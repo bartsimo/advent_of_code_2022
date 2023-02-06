@@ -13,7 +13,7 @@
 ## Draw: 3
 ## Win: 6
 
-
+# for comments, see two.py the only thing that changed is the rule for how points are received
 def calculate_score(opponent, me):
     score = 0
     if me == "X":
